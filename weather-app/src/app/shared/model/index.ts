@@ -11,3 +11,4 @@ export * from './region';
 export * from './sources';
 export * from './supplemental-admin-areas';
 export * from './time-zone';
+export * from './localtion';

@@ -3,9 +3,9 @@ import { Http, BaseRequestOptions, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { API_KEY, API_URL, POSTAL_CODE_SEARCH } from './app.constant';
+import { API_KEY, API_URL, POSTAL_CODE_SEARCH, CITIES_CODE_SEARCH, AUTO_COMPLETE } from './app.constant';
 import { Observable } from 'rxjs/Observable';
-import { City } from './shared/model';
+import { City, Location } from './shared/model';
 
 @Injectable()
 export class AppService {
@@ -13,20 +13,20 @@ export class AppService {
         private http: Http
     ) { }
 
-    searchPostalCode(postalCode: string): Observable<City | {}> {
-        const options = this.createSearchParams({ apiKey: API_KEY, q: postalCode });
-        return this.http.get(API_URL + POSTAL_CODE_SEARCH, options).map((response) => {
-            const city: City = response.json();
-            return city;
+    searchLocationAutocomplete(key: any): Observable<Location[] | any> {
+        const options = this.createSearchParams({ key: API_KEY, q: key });
+        return this.http.get(API_URL + AUTO_COMPLETE, options).map((response) => {
+            const localtions: Location[] = response.json();
+            return localtions;
         }).catch((err) => {
             return this.handleError(err);
-        });
+        })
     }
 
     createSearchParams(requestParam: any): BaseRequestOptions {
         const options = new BaseRequestOptions();
         const params = new URLSearchParams();
-        params.set('apikey', requestParam.apiKey);
+        params.set('key', requestParam.key);
         params.set('q', requestParam.q);
         options.params = params;
         return options;

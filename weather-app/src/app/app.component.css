@@ -1,0 +1,11 @@
+.footer-container {
+    margin-top: auto;
+}
+
+.main-container {
+    height: calc(100% - 70px);
+}
+
+.main-content {
+    padding: 20px 10%;
+}

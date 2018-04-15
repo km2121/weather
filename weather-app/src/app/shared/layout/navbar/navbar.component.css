@@ -1,0 +1,12 @@
+.navbar-content {
+    min-height: 70px;
+    font-size: 22px;
+    background-color: #546f9e;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: unset;
+    color: inherit;
+}
