@@ -6,7 +6,10 @@ import {
     MatGridListModule,
     MatIconModule,
     MatInputModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatProgressSpinnerModule,
+    MatTabsModule,
+    MatCardModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
@@ -26,7 +29,10 @@ import { HttpModule } from '@angular/http';
         MatGridListModule,
         MatIconModule,
         MatInputModule,
-        MatAutocompleteModule
+        MatAutocompleteModule,
+        MatProgressSpinnerModule,
+        MatTabsModule,
+        MatCardModule
     ]
 })
 export class SharedModule { }

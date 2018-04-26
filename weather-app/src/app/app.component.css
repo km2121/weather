@@ -9,3 +9,17 @@
 .main-content {
     padding: 20px 10%;
 }
+
+.search-progress,
+mat-progress-spinner /deep/svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.search-bar /deep/.mat-input-suffix {
+    display: -webkit-box;
+}
+
+.tab-container {
+    padding: 30px;
+}

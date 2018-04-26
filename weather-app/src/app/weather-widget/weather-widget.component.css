@@ -1,0 +1,12 @@
+mat-card-header {
+    text-transform: uppercase !important;
+}
+
+.highest-temp {
+    font-size: 30px;
+}
+
+.lowest-temp {
+    font-size: 24px;
+    opacity: .6;
+}

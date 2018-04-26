@@ -1,0 +1,14 @@
+<mat-card *ngIf="forecastDay">
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+        <mat-card-subtitle>{{shortDate}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <img src="{{forecastDay.day.condition.icon}}">
+        <div fxLayout="row">
+            <span class="highest-temp">{{forecastDay.day.maxtemp_f}}°</span>
+            <span class="lowest-temp">/{{forecastDay.day.mintemp_f}}°F</span>
+        </div>
+        <span>{{forecastDay.day.condition.text}}</span>
+    </mat-card-content>
+</mat-card>
